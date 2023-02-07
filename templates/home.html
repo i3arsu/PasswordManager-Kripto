@@ -124,14 +124,14 @@
 
     </div>
     <!--cards-->
-    <div class="container">
+    <div class="modal" id="password-modal">
         {% for password in passwords %}
         <div class="card">
             <div class="actions">&nbsp;Actions
                 <a href="javascript:;" onclick= "document.getElementById('delete-btn{{password.id}}').click();" class="action-item">Delete</a>
                 <form hidden = "true" action= "." method="POST">
                     {% csrf_token %}
-                    <input type = "text" hidden = "true" name = "password-id" value = "{{password.id}}"
+                    <input type = "text" hidden = "true" name = "password-id" value = "{{password.id}}">
                     <input type = "submit" id ="delete-btn{{password.id}}" name="delete">
                 </form>
                 
@@ -148,10 +148,6 @@
         {% endfor %}
         
     </div>  
-
-    <footer>
-        <a href="">Link to the project</a>
-    </footer>
 
 
 </body>

@@ -7,7 +7,7 @@ if(modalWrapper){
         const modal = document.getElementById(id);
         
         modalWrapper.style.display = "flex";
-        modal.style.display = "flex";
+        console.log(modal)
         //close modal
         const close = document.getElementById("close-modal");
         close.addEventListener("click",() => {
